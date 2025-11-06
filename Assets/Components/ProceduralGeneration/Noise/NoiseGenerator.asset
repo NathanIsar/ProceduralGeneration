@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 327173fde7ba24b489ed5bf07374842a, type: 3}
+  m_Name: NoiseGenerator
+  m_EditorClassIdentifier: Assembly-CSharp::NoiseGenerator
+  _maxSteps: 30
+  _seed: 254
+  _frequency: 0.02
+  _noiseType: 1
+  _fractalType: 4
+  _octaves: 4
+  _lacunarity: 2
+  _gain: 0.5
+  _waterThreshold: -0.3
+  _sandThreshold: -0.1
+  _rockThreshold: 0.4
+  _useSecondaryNoise: 0
+  _secondaryFrequency: 0.05
+  _secondaryWeight: 0.3
+  _visualizeStepByStep: 0
+  _tilesPerStep: 10
