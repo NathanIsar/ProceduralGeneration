@@ -13,17 +13,16 @@ MonoBehaviour:
   m_Name: NoiseGenerator
   m_EditorClassIdentifier: Assembly-CSharp::NoiseGenerator
   _maxSteps: 30
-  _seed: 254
   _frequency: 0.02
   _noiseType: 1
   _fractalType: 4
   _octaves: 4
   _lacunarity: 2
   _gain: 0.5
-  _waterThreshold: -0.3
-  _sandThreshold: -0.1
+  _waterThreshold: -0.2
+  _sandThreshold: 0
   _rockThreshold: 0.4
-  _useSecondaryNoise: 0
+  _useSecondaryNoise: 1
   _secondaryFrequency: 0.05
   _secondaryWeight: 0.3
   _visualizeStepByStep: 0
