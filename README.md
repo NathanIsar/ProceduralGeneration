@@ -61,11 +61,51 @@ Dans la majorité des cas l'algorithmes ressembelra à :
 - Vérifier l'annulation
 - Ajouter des délais
 - 
-je vous laisse vosu référer au méthode pour les associer au bonnes étapes.
+je vous laisse vous référer au méthode pour les associer au bonnes étapes.
 
 ---
 4. ## Simple Room Placement
 
+Le Simple Room Placement est un algorithme qui génère un donjon simple avec des pièces rectangulaires connectées par des couloirs. 
+
+Dans un premier temps, les variables :
+<img width="315" height="39" alt="image" src="https://github.com/user-attachments/assets/f8cec5d6-a7b8-4490-ba15-da2eaac8c463" />
+
+
+Dans la fonction ApplyGeneration, on réalise cette boucle afin de placer nos rooms de taille aléatoire, de position aléatoire. On vérifie si il n'y pas de collsion entre eux, et on répète jusqu'a _maxSteps.
+<img width="457" height="450" alt="image" src="https://github.com/user-attachments/assets/b9425254-edcf-4d0e-8451-d279d11a0e9a" />
+
+On obtient bien des pièces dispersées aléatorirement et séparées.
+
+Toujours dans la fonction ApplyGeneration, on commence par chosir une première pièce comme connectée,
+ensuite, on va chercher la pièce déconnecté la plus proche d'une pièce connectée. On trace des couloirs entre eux d'abord horizontal puis vertical, c'est pièce est alors marqué comme connecté. On répète alors jusqu'à ce que toutes les pièces soit connectées.
+
+<img width="428" height="482" alt="image" src="https://github.com/user-attachments/assets/1a62bf4f-e418-4bc9-9216-3b272b9fa8fc" />
+
+
+ET pour finir, on appelle BuildGround(), pour mettre un sol à la fin de la boucle ApplyGeneration().
+<img width="408" height="164" alt="image" src="https://github.com/user-attachments/assets/5e1f80bf-44a9-45a2-a51b-b001c1860261" />
+
+---
+
+On l'utilise si :
+- on veut un donjon simple
+- des rooms délimité pour les combats
+- on veut des donjons prévisible
+  
+On évite si :
+- un rendu plus naturel et moins prévisible
+- une structure logique dans la progression
+- Des chemins alternatifs en grand nombres
+
+5. ## Binary Space Room (BSP)
+
+Le BSP est un algorithme qui va diviser l'espace des rooms de façon récursives via des nodes, on y place alors une pièce dans chaque zone finale.
+
+
+<img width="301" height="151" alt="image" src="https://github.com/user-attachments/assets/1321b90d-7a28-41f4-9ea6-6df1765df894" />
+
+c'es nodes sont placé dans un ordre hiérarchique, ce qui va nous permettre de contruitre petit notre en suivant l'arbre, puis en connctant les nodes entre eux pour créer nos couloirs.
 
 
 
