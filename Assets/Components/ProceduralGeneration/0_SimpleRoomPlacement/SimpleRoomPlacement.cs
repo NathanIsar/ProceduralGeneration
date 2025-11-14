@@ -19,7 +19,6 @@ namespace Components.ProceduralGeneration.SimpleRoomPlacement
       
         protected override async UniTask ApplyGeneration(CancellationToken cancellationToken)
         {
-            // Declare variables here
             int roomCount = 0;
             List<RectInt> placedRooms = new List<RectInt>();
             List<RectInt> disconnectedRooms = new List<RectInt>();
@@ -27,7 +26,7 @@ namespace Components.ProceduralGeneration.SimpleRoomPlacement
 
             for (int i = 0; i < _maxSteps; i++)
             {
-                // Check for cancellation
+
                 cancellationToken.ThrowIfCancellationRequested();
 
                 if (roomCount >= _maxRooms)
@@ -71,7 +70,6 @@ namespace Components.ProceduralGeneration.SimpleRoomPlacement
 
                 placedRooms.Add(roomRect);
                 disconnectedRooms = new List<RectInt>(placedRooms);
-                // Waiting between steps to see the result.
                 await UniTask.Delay(GridGenerator.StepDelay, cancellationToken : cancellationToken);
             }
             RectInt startRoom = disconnectedRooms[0];
@@ -127,7 +125,6 @@ namespace Components.ProceduralGeneration.SimpleRoomPlacement
                 disconnectedRooms.Remove(roomToConnect);
             }
 
-            // Final ground building.
             BuildGround();
         }
         
@@ -135,7 +132,6 @@ namespace Components.ProceduralGeneration.SimpleRoomPlacement
         {
             var groundTemplate = ScriptableObjectDatabase.GetScriptableObject<GridObjectTemplate>("Grass");
             
-            // Instantiate ground blocks
             for (int x = 0; x < Grid.Width; x++)
             {
                 for (int z = 0; z < Grid.Lenght; z++)
