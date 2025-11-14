@@ -89,13 +89,13 @@ ET pour finir, on appelle BuildGround(), pour mettre un sol à la fin de la bouc
 ---
 
 On l'utilise si :
-- on veut un donjon simple
-- des rooms délimité pour les combats
-- on veut des donjons prévisible
+- On veut un donjon simple
+- Des rooms délimité pour les combats
+- On veut des donjons prévisible
   
 On évite si :
-- un rendu plus naturel et moins prévisible
-- une structure logique dans la progression
+- Un rendu plus naturel et moins prévisible
+- Une structure logique dans la progression
 - Des chemins alternatifs en grand nombres
 
 5. ## Binary Space Room (BSP)
@@ -137,12 +137,12 @@ On a donc pour chaque noeud parent, 2 enfant que l'on va connecter. On cherche l
 ---
 
 On l'utilise si :
-- on veut des donjons avec un distribution uniforme
-- on veut garantir qu'il n'y a pas de grandes zones vides
-- on veut une structure hiérarchique (thématiques)
+- On veut des donjons avec un distribution uniforme
+- On veut garantir qu'il n'y a pas de grandes zones vides
+- On veut une structure hiérarchique (thématiques)
   
 On évite si :
-- si on ne veut pas un rendu trop régulier
+- Si on ne veut pas un rendu trop régulier
 - Si on ne veut pas que toutes les zones soit occuper
 - Plus complexe à comprendre.
 
@@ -170,7 +170,7 @@ On répète cette étape jusqu'à _maxSteps
 ---
 
 On l'utilise si :
-- on veut des cavernes naturelles, îles organiques, forêts, végétations, lacs vont avoir un air anturel
+- On veut des cavernes naturelles, îles organiques, forêts, végétations, lacs vont avoir un air anturel
 
   
 On évite si :
@@ -213,6 +213,25 @@ Comme, on peut voir dans les variables, il y a plusieurs paramètres que l'on pe
 
 Vous pouvez aussi choisir parmis différent type de noise comme perlin ou OpenSimplex2 et bien d'autres.
 Chacun ayant ces particularités.
+
+---
+
+On l'utilise si :
+- On a besoind de heightmaps
+- On besoin de biomes avec des transitions naturelles
+- îles,continent réalistes
+- Variations de texture
+- Bien optimisé pour de l'open-world
+
+  
+On évite si :
+- Si on veut des donjons avce des couloirs
+- Si on veut des formes vraiment spécifiques
+- Connectivité aléatoires
+- Peut etre répétitif
+- Génère juste un terrain
+
+---
   
 
 
