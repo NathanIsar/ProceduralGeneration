@@ -218,7 +218,7 @@ Chacun ayant ces particularités.
 
 On l'utilise si :
 - On a besoind de heightmaps
-- On besoin de biomes avec des transitions naturelles
+- On a besoin de biomes avec des transitions naturelles
 - îles,continent réalistes
 - Variations de texture
 - Bien optimisé pour de l'open-world
